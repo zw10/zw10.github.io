@@ -20,27 +20,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.40.3 with theme Tranquilpeak 0.4.3-BETA">
-    <title>Welcome and relax</title>
+    <title>Why there&#39;s always arbitrage... and free lunches: part 2</title>
     <meta name="author" content="Zao Wu">
-    <meta name="keywords" content="hello-world, analytics, data science, artificial intelligence, machine learning, finance, economics, zao, wu">
+    <meta name="keywords" content="arbitrage, no free lunch theorem, efficient market hypothesis, analytics, data science, artificial intelligence, machine learning, finance, economics, zao, wu">
 
     <link rel="icon" href="https://zw10.github.io/favicon.png">
     
 
     
-    <meta name="description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
+    <meta name="description" content="The &lsquo;no free lunch&rsquo; (NFL) theorem is resembles the EMH in that their true values lies in exactly the opposite of what they say at face value. The folk version of the NFL says that that no algorithm or optimisation technique will perform any better for all cases. Effectively, that there is no silver bullet or &lsquo;algorithmic arbitrage&rsquo; that will magically solve all your needs.
 
 ">
-    <meta property="og:description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
+    <meta property="og:description" content="The &lsquo;no free lunch&rsquo; (NFL) theorem is resembles the EMH in that their true values lies in exactly the opposite of what they say at face value. The folk version of the NFL says that that no algorithm or optimisation technique will perform any better for all cases. Effectively, that there is no silver bullet or &lsquo;algorithmic arbitrage&rsquo; that will magically solve all your needs.
 
 ">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Welcome and relax">
-    <meta property="og:url" content="/2018/05/welcome-and-relax/">
+    <meta property="og:title" content="Why there&#39;s always arbitrage... and free lunches: part 2">
+    <meta property="og:url" content="/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-2/">
     <meta property="og:site_name" content="Cafedatascience: Serving coffee for the Mind">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Cafedatascience: Serving coffee for the Mind">
-    <meta name="twitter:description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
+    <meta name="twitter:description" content="The &lsquo;no free lunch&rsquo; (NFL) theorem is resembles the EMH in that their true values lies in exactly the opposite of what they say at face value. The folk version of the NFL says that that no algorithm or optimisation technique will perform any better for all cases. Effectively, that there is no silver bullet or &lsquo;algorithmic arbitrage&rsquo; that will magically solve all your needs.
 
 ">
     
@@ -54,7 +54,7 @@
     
 
     
-      <meta property="og:image" content="https://zw10.github.io/images/20180516_blank_cropped.jpg">
+      <meta property="og:image" content="https://zw10.github.io/images/20180523_free_lunch_cropped.jpg">
     
     
       <meta property="og:image" content="https://zw10.github.io/images/20180522_covering_centred.jpg">
@@ -199,15 +199,15 @@
       <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Welcome and relax
+      Why there&#39;s always arbitrage... and free lunches: part 2
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-05-21T00:00:00Z">
+      <time itemprop="datePublished" datetime="2018-05-24T00:00:00Z">
         
-  May 21, 2018
+  May 24, 2018
 
       </time>
     
@@ -216,7 +216,9 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://zw10.github.io/categories/hello-world">hello-world</a>
+      <a class="category-link" href="https://zw10.github.io/categories/data-science">data science</a>, 
+    
+      <a class="category-link" href="https://zw10.github.io/categories/finance">finance</a>
     
   
 
@@ -236,13 +238,21 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.</p>
+              <p>The &lsquo;no free lunch&rsquo; (NFL) theorem is resembles the EMH in that their true values lies in exactly the opposite of what they say at face value. The folk version of the NFL says that that no algorithm or optimisation technique will perform any better for all cases. Effectively, that there is no silver bullet or &lsquo;algorithmic arbitrage&rsquo; that will magically solve all your needs.</p>
 
 <p></p>
 
 <!--![starry_night](/img/20180516_blank.jpg)-->
 
-<p>Further posts will be dedicated to analytics, data science, mathematical philosophy and other interesting trends and everyday observations. Looking forward to seeing you again!</p>
+<p>Again, a closer examination of the underlying assumptions used in the actual proof is rather more insightful. Taking a modified example from <a href="https://en.wikipedia.org/wiki/No_free_lunch_theorem">Wikipedia</a>, there are two friends Amy and Bob who compete to see who can find the highest point (global maximum) of a mountain range first. A third friend Chloe acts as the judge and informs them once they&rsquo;ve found the highest point. Amy&rsquo;s strategy is quite sensible: she heads in the direction where the slope rises up the steepest (gradient ascent) and once she reaches a local peak (local maximum), she restarts from a random location in the mountain range. The maverick Bob devises the opposite strategy of heading direction where the slope goes down the steepest. Each time he reaches a local trough (local minimum) he also restarts from a random location.</p>
+
+<p>We expect that for different mountain ranges, Amy will generally find the highest point faster than Bob. However, aliens have come to join in the fun, planting a 60,000-foot pole in the deepest trough, which then becomes the highest point in the mountain range. This means that Bob now has the advantage against Amy. Furthermore, the aliens can potentially assist Bob in each and every mountain range - for every situation where aliens don&rsquo;t come, there&rsquo;s a scenario where aliens do come and Bob holds the advantage. So assuming that there&rsquo;s a 50-50 chance of aliens coming (i.e. averaged over all possible scenarios and mountain ranges), Amy and Bob are evenly matched, and neither strategy has an advantage against the other.</p>
+
+<p>More broadly, aliens can plant the pole at any location (uniform randomness) to nullify the advantage of any strategy involving some form of trial-and-improvement, making it no better than random search. In other words, exhaustively enumerating all possible solutions to examine which one produces the best answer is the optimal strategy.</p>
+
+<p>Fortunately, uniform randomness doesn&rsquo;t usually hold in the real-world. All algorithms, heuristics and optimisation techniques from data science, machine learning, statistics, etc. implicitly depend on this, only differing by the further assumptions taken - under relatively mild conditions, we can use genetic algorithms &amp; simulated annealing, while stronger assumptions (e.g. continuity, differentiability, convexity, etc.) allow us to use ever more efficient techniques (e.g. particle swarm optimisation, gradient descent, Newton-Raphson, etc.). Distribution bias relative to some variable is fundamental to allow hidden information and signals to be captured and used. When the solution space is uniformly random and holds no information, machine learning (or any kind of learning, including human input, for that matter) can&rsquo;t be used, since you cannot learn from experience.</p>
+
+<p>The inverse provides the key takeaway: in the real world, there is distributional bias and the chance of aliens coming with 60,000-foot poles is less than 50%. Because of this, there will <em>always</em> be generic strategies that are inherently better than others - these strategies are more in tune with what the state of the world is actually like.  Although there will be always be specific situations in which further-fine tuning can improve a top-performing generic model created through these strategies (e.g. by overfitting like there&rsquo;s no tomorrow), then this creates a bias-variance tradeoff and reduces the model&rsquo;s generalisability. Here&rsquo;s to algorithmic arbitrage!</p>
               
             </div>
           </div>
@@ -267,7 +277,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-1/" data-tooltip="Why there&#39;s always arbitrage... and free lunches: part 1">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -275,7 +285,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-1/" data-tooltip="Why there&#39;s always arbitrage... and free lunches: part 1">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -293,19 +303,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-2/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-2/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-2/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -353,7 +363,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-1/" data-tooltip="Why there&#39;s always arbitrage... and free lunches: part 1">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -361,7 +371,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-1/" data-tooltip="Why there&#39;s always arbitrage... and free lunches: part 1">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -379,19 +389,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-2/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-2/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/why-theres-always-arbitrage...-and-free-lunches-part-2/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -421,19 +431,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwhy-theres-always-arbitrage...-and-free-lunches-part-2%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwhy-theres-always-arbitrage...-and-free-lunches-part-2%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwhy-theres-always-arbitrage...-and-free-lunches-part-2%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -596,9 +606,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/zw10.github.io\/2018\/05\/welcome-and-relax\/';
+          this.page.url = 'https:\/\/zw10.github.io\/2018\/05\/why-theres-always-arbitrage...-and-free-lunches-part-2\/';
           
-            this.page.identifier = '\/2018\/05\/welcome-and-relax\/'
+            this.page.identifier = '\/2018\/05\/why-theres-always-arbitrage...-and-free-lunches-part-2\/'
           
         };
         (function() {
