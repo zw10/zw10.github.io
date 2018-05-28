@@ -20,28 +20,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.40.3 with theme Tranquilpeak 0.4.3-BETA">
-    <title>Welcome and relax</title>
+    <title>The inverse part I: Why there&#39;s always arbitrage ...</title>
     <meta name="author" content="Zao Wu">
-    <meta name="keywords" content="hello-world, analytics, data science, artificial intelligence, machine learning, finance, economics, zao, wu">
+    <meta name="keywords" content="arbitrage, no free lunch theorem, efficient market hypothesis, 80-20 principle, analytics, data science, artificial intelligence, machine learning, finance, economics, zao, wu">
 
     <link rel="icon" href="https://zw10.github.io/images/zw_logo.png">
     
 
     
-    <meta name="description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
-
+    <meta name="description" content="In my university days, we had a course named &lsquo;Finance and Financial Management&rsquo;, delivered by a former investment banker. Unsurprisingly, it was heavily oversubscribed (I studied maths in London), and any students landing a seat can count themselves very fortunate indeed. Rather less fortunately, half way through the first lecture, I wanted nothing better than to walk out the door.
 ">
-    <meta property="og:description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
-
+    <meta property="og:description" content="In my university days, we had a course named &lsquo;Finance and Financial Management&rsquo;, delivered by a former investment banker. Unsurprisingly, it was heavily oversubscribed (I studied maths in London), and any students landing a seat can count themselves very fortunate indeed. Rather less fortunately, half way through the first lecture, I wanted nothing better than to walk out the door.
 ">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Welcome and relax">
-    <meta property="og:url" content="/2018/05/welcome-and-relax/">
+    <meta property="og:title" content="The inverse part I: Why there&#39;s always arbitrage ...">
+    <meta property="og:url" content="/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">
     <meta property="og:site_name" content="Coffee for the Mind">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Coffee for the Mind">
-    <meta name="twitter:description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
-
+    <meta name="twitter:description" content="In my university days, we had a course named &lsquo;Finance and Financial Management&rsquo;, delivered by a former investment banker. Unsurprisingly, it was heavily oversubscribed (I studied maths in London), and any students landing a seat can count themselves very fortunate indeed. Rather less fortunately, half way through the first lecture, I wanted nothing better than to walk out the door.
 ">
     
     
@@ -54,7 +51,7 @@
     
 
     
-      <meta property="og:image" content="https://zw10.github.io/images/20180516_blank_cropped.jpg">
+      <meta property="og:image" content="https://zw10.github.io/images/20180528_money_cropped.jpg">
     
     
       <meta property="og:image" content="https://zw10.github.io/images/20180522_covering_centred_2.jpg">
@@ -199,19 +196,19 @@
       <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Welcome and relax
+      The inverse part I: Why there&#39;s always arbitrage ...
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-05-21T00:00:00Z">
+      <time itemprop="datePublished" datetime="2018-05-23T00:00:00Z">
         
   
   
   
   
-    21 May 2018
+    23 May 2018
   
 
       </time>
@@ -221,7 +218,9 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://zw10.github.io/categories/hello-world">hello-world</a>
+      <a class="category-link" href="https://zw10.github.io/categories/data-science">data science</a>, 
+    
+      <a class="category-link" href="https://zw10.github.io/categories/finance">finance</a>
     
   
 
@@ -241,13 +240,30 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.</p>
+              <p>In my university days, we had a course named &lsquo;Finance and Financial Management&rsquo;, delivered by a former investment banker. Unsurprisingly, it was heavily oversubscribed (I studied maths in London), and any students landing a seat can count themselves very fortunate indeed. Rather less fortunately, half way through the first lecture, I wanted nothing better than to walk out the door.
+</p>
 
-<p></p>
+<p>You see, the former investment banker told us to assume there&rsquo;s no arbitrage, which means that all assets are priced fairly. He also stated that similar assumptions will be necessary throughout the course.</p>
 
-<!--![starry_night](/img/20180516_blank.jpg)-->
+<p>I was devastated: I took the course because I wanted to make money, so what&rsquo;s the point in learning models that will never do so?</p>
 
-<p>Further posts will be dedicated to analytics, data science, mathematical philosophy and other interesting trends and everyday observations. Looking forward to seeing you again!</p>
+<p>But clearly, various parts of the financial sector do use and make money from those models, or otherwise they&rsquo;d be out of business. A few days later I had an epiphany, no doubt like countless other before me.</p>
+
+<p>The solution requires a change of perspective: the way to profit from those models is to notice when things don&rsquo;t add up somewhere, thus violating the equality and creating the opportunity for arbitrage.</p>
+
+<p>A few weeks later, we were introduced to the efficient market hypothesis (EMH), which essentially proposes that it&rsquo;s impossible to beat the market, because the stocks always trade at their fair value.</p>
+
+<p>&ldquo;The true insight from the EMH,&rdquo; our professor said, &ldquo;is that it&rsquo;s tough to beat the market.&rdquo; Fair enough, but there&rsquo;s another interesting implication that we can uncover by examining the key underlying assumption of the EMH.</p>
+
+<p><img src="https://zw10.github.io/images/20180523_stocks_cropped.jpg" alt="stock market" title="Obviously this guy's not fast enough" /><em>The stock market: fortune to the fast</em></p>
+
+<p>What happens if stock prices deviate from their fair values? Arbitrageurs take profit and drive the prices back where they belong. This constant negative feedback loop guarantees the efficiency of the stock market, but also necessitates the fact that there&rsquo;s always arbitrage.</p>
+
+<p>After all, arbitrageurs constantly profit, which is why there&rsquo;s arbitrage. So the other half of the story is that it&rsquo;s tough to beat the market unless you&rsquo;re faster than everyone else. But if you are always faster, then there&rsquo;s <em>always</em> arbitrage for you somewhere out there.</p>
+
+<p>As long as this is large enough to overcome market friction (e.g. transaction costs), you&rsquo;re pretty much guaranteed riskless profit.</p>
+
+<p><a href="https://zw10.github.io/2018/05/the-inverse-part-ii-...-and-free-lunches/">Continue to part II</a></p>
               
             </div>
           </div>
@@ -259,7 +275,9 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://zw10.github.io/tags/hello-world/">hello-world</a>
+  <a class="tag tag--primary tag--small" href="https://zw10.github.io/tags/theoretical-finance/">theoretical finance</a>
+
+  <a class="tag tag--primary tag--small" href="https://zw10.github.io/tags/static/">static</a>
 
                   </div>
                 
@@ -272,7 +290,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../" data-tooltip="The inverse part I: Why there&#39;s always arbitrage ...">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/the-inverse-part-ii-...-and-free-lunches/" data-tooltip="The inverse part II: ... and free lunches ">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -280,7 +298,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/welcome-and-relax/" data-tooltip="Welcome and relax">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -298,19 +316,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -358,7 +376,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../" data-tooltip="The inverse part I: Why there&#39;s always arbitrage ...">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/the-inverse-part-ii-...-and-free-lunches/" data-tooltip="The inverse part II: ... and free lunches ">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -366,7 +384,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/welcome-and-relax/" data-tooltip="Welcome and relax">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -384,19 +402,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -426,19 +444,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fthe-inverse-part-i-why-theres-always-arbitrage-...%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fthe-inverse-part-i-why-theres-always-arbitrage-...%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fthe-inverse-part-i-why-theres-always-arbitrage-...%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -617,9 +635,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/zw10.github.io\/2018\/05\/welcome-and-relax\/';
+          this.page.url = 'https:\/\/zw10.github.io\/2018\/05\/the-inverse-part-i-why-theres-always-arbitrage-...\/';
           
-            this.page.identifier = '\/2018\/05\/welcome-and-relax\/'
+            this.page.identifier = '\/2018\/05\/the-inverse-part-i-why-theres-always-arbitrage-...\/'
           
         };
         (function() {

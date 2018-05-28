@@ -20,28 +20,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.40.3 with theme Tranquilpeak 0.4.3-BETA">
-    <title>Welcome and relax</title>
+    <title>Building this blog part I: Going Hugo</title>
     <meta name="author" content="Zao Wu">
-    <meta name="keywords" content="hello-world, analytics, data science, artificial intelligence, machine learning, finance, economics, zao, wu">
+    <meta name="keywords" content="hugo, github, gitlab, analytics, data science, artificial intelligence, machine learning, finance, economics, zao, wu">
 
     <link rel="icon" href="https://zw10.github.io/images/zw_logo.png">
     
 
     
-    <meta name="description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
-
+    <meta name="description" content="If you want to make a blog like this one, here&rsquo;s how to do it. I&rsquo;m also noting it down for my own use, in case I need to replicate my setup again. Hugo&rsquo;s straightforward enough that anyone new to it (like me) can quickly be effective with it.
 ">
-    <meta property="og:description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
-
+    <meta property="og:description" content="If you want to make a blog like this one, here&rsquo;s how to do it. I&rsquo;m also noting it down for my own use, in case I need to replicate my setup again. Hugo&rsquo;s straightforward enough that anyone new to it (like me) can quickly be effective with it.
 ">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Welcome and relax">
-    <meta property="og:url" content="/2018/05/welcome-and-relax/">
+    <meta property="og:title" content="Building this blog part I: Going Hugo">
+    <meta property="og:url" content="/2018/05/building-this-blog-part-i-going-hugo/">
     <meta property="og:site_name" content="Coffee for the Mind">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Coffee for the Mind">
-    <meta name="twitter:description" content="Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
-
+    <meta name="twitter:description" content="If you want to make a blog like this one, here&rsquo;s how to do it. I&rsquo;m also noting it down for my own use, in case I need to replicate my setup again. Hugo&rsquo;s straightforward enough that anyone new to it (like me) can quickly be effective with it.
 ">
     
     
@@ -54,7 +51,7 @@
     
 
     
-      <meta property="og:image" content="https://zw10.github.io/images/20180516_blank_cropped.jpg">
+      <meta property="og:image" content="https://zw10.github.io/images/20180527_hugo_filtered.jpg">
     
     
       <meta property="og:image" content="https://zw10.github.io/images/20180522_covering_centred_2.jpg">
@@ -199,19 +196,19 @@
       <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Welcome and relax
+      Building this blog part I: Going Hugo
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-05-21T00:00:00Z">
+      <time itemprop="datePublished" datetime="2018-05-27T00:00:00Z">
         
   
   
   
   
-    21 May 2018
+    27 May 2018
   
 
       </time>
@@ -221,7 +218,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://zw10.github.io/categories/hello-world">hello-world</a>
+      <a class="category-link" href="https://zw10.github.io/categories/web">web</a>
     
   
 
@@ -241,13 +238,200 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.</p>
+              <p>If you want to make a blog like this one, here&rsquo;s how to do it. I&rsquo;m also noting it down for my own use, in case I need to replicate my setup again. Hugo&rsquo;s straightforward enough that anyone new to it (like me) can quickly be effective with it.
+</p>
 
-<p></p>
+<p>My current setup uses:</p>
 
-<!--![starry_night](/img/20180516_blank.jpg)-->
+<ul>
+<li>Hugo - to build the static website</li>
+<li>Github - to host my website and keep my public repository (though I&rsquo;m going to move to Netlify soon)</li>
+<li>Gitlab - where I have my private repository</li>
+</ul>
 
-<p>Further posts will be dedicated to analytics, data science, mathematical philosophy and other interesting trends and everyday observations. Looking forward to seeing you again!</p>
+<h2 id="why-hugo">Why Hugo?</h2>
+
+<p>Short version: my friend recommended that I give Hugo or Jekyll a shot when he heard that I wanted to start this blog. After comparing the two technologies, I felt the general consensus was that Hugo was faster but had fewer features/ themes (see the <a href="#why-hugo-full">full version</a> at the bottom).</p>
+
+<p>I&rsquo;m currently using Ubuntu LTS 16.04 and so binary executables aren&rsquo;t a thing. In fact you&rsquo;ll have an easier time if you&rsquo;re using windows, since you can just download and use the GUI installers.</p>
+
+<p>Although it&rsquo;s possible to install Hugo directly from the Ubuntu software centre or just using <code>apt-get</code>, don&rsquo;t! I couldn&rsquo;t get the website to build initially, because of an out-of-date version of Hugo.</p>
+
+<p>Instead, go to the <a href="https://github.com/gohugoio/hugo/releases">Hugo release page</a> and download the most recent version of Hugo. Make sure that you&rsquo;ve git installed to make things easier.</p>
+
+<p>If needed, check that the download completed successfully against the checksums txt (on the release page) by using <code>md5sum</code>.</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash">cd Downloads;\
+md5sum hugo*.deb</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>Go ahead and install it.</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash"># Assuming you&#39;re also using Ubuntu
+sudo dpkg -i hugo*.deb;\
+
+# Now let hugo do its magic...
+hugo new site myblog</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>The last line allowed hugo to build the skeleton for a website.</p>
+
+<p>Hugo doesn&rsquo;t come with a default theme, and after hunting around a bit I settled for <a href="https://tranquilpeak.kakawait.com/">tranquilpeak</a>. For this example, I&rsquo;ll use the <a href="https://themes.gohugo.io/gohugo-theme-ananke/">ananke</a> theme as an example instead since it&rsquo;s a bit easier to start off with, but feel free to <a href="https://themes.gohugo.io/">hunt around</a>. You can also follow the <a href="https://gohugo.io/getting-started/quick-start/">quick start guide</a>.</p>
+
+<p>Note that using <code>git submodule</code> over <code>git clone</code> is important if you want to use netlify.</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash">cd myblog;\
+
+# Initialise Git
+git init;\
+
+# Download the Tranquil peak theme
+# Make sure to change to the right URL if you prefer another theme
+git submodule https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\
+
+# Now tell hugo the theme you want to use
+echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml;\
+
+# Say hello to the world
+hugo new posts/hello-world.md</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>Note that you can also just open the configuration file with any text editor and add in <code>theme = &quot;ananke&quot;</code> directly, instead of through the terminal.</p>
+
+<p>So fire up <code>hugo server</code> to host from your local machine.
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash">hugo server</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure></p>
+
+<p>Pour yourself a cup of coffee, open up your favourite browser, <code>Ctrl+L</code> (gotta love this shortcut) to the URL bar, type in `localhost:1313&rsquo;, and sit back to enjoy the ananke theme.</p>
+
+<h2 id="why-hugo-full">Why Hugo (full version)?</h2>
+
+<p>The rise of the static website generators over the past few years is well-documented, for example <a href="https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/">here</a>. The leading contenders really came down to Hugo and Jekyll, as my friend had recommended.</p>
+
+<p>Despite the name, static websites generator can form part of the <a href="https://jamstack.org/">jamstack</a>, which you can build dynamic &amp; interactive websites with.</p>
+
+<p>Advantages of Hugo:</p>
+
+<ul>
+<li>It&rsquo;s fast - it&rsquo;s the only static website generator written in a static type language (golang) out of the top twenty most popular, according to <a href="https://www.staticgen.com/">StaticGen</a>. In a nutshell, something that&rsquo;s static means that the computer has fewer things to decide at runtime, and that makes things <em>fast</em> to build, deploy and load.</li>
+<li>It&rsquo;s easy to use. OK, it&rsquo;s not quite point and click (<a href="https://en.wikipedia.org/wiki/Microsoft_FrontPage">FrontPage</a>, anyone?), but anyone happy to play around with some configuration files and markdown will be able to produce a decent website.</li>
+<li>You have loads of themes to choose from. Granted, not as many as Jekyll, but likely more than enough for the most folks. Of course, if you really can&rsquo;t find one to your liking, you can always build your own.</li>
+</ul>
+
+<p>Disadvantages of Hugo:</p>
+
+<ul>
+<li>It&rsquo;s static so it won&rsquo;t be, well, so dynamic. But then that&rsquo;s not really a huge issue any more in the current landscape, as mentioned previously. &lsquo;Static&rsquo; websites can do many things previously limited to &lsquo;dynamic&rsquo; websites, such as <a href="https://gohugo.io/content-management/">content management</a>,  <a href="https://gohugo.io/content-management/comments/">comments</a> and even <a href="https://gohugo.io/tools/search/">search</a></li>
+<li>It&rsquo;s not quite as full-featured as Jekyll, so you won&rsquo;t see a plugin API like that of Jekyll&rsquo;s. On the other hand, this wasn&rsquo;t a major obstacle for me.</li>
+</ul>
+
+<p>For me, the benefits of Hugo far outweighed the downsides - it was perfect for my blog.</p>
+
+<p>Oh, and did I mention, Hugo is <em>fast</em>?</p>
               
             </div>
           </div>
@@ -259,7 +443,7 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://zw10.github.io/tags/hello-world/">hello-world</a>
+  <a class="tag tag--primary tag--small" href="https://zw10.github.io/tags/blogging/">blogging</a>
 
                   </div>
                 
@@ -272,7 +456,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../" data-tooltip="The inverse part I: Why there&#39;s always arbitrage ...">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -280,7 +464,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/the-inverse-part-ii-...-and-free-lunches/" data-tooltip="The inverse part II: ... and free lunches ">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -298,19 +482,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -358,7 +542,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../" data-tooltip="The inverse part I: Why there&#39;s always arbitrage ...">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -366,7 +550,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zw10.github.io/2018/05/the-inverse-part-ii-...-and-free-lunches/" data-tooltip="The inverse part II: ... and free lunches ">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -384,19 +568,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/welcome-and-relax/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -426,19 +610,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fbuilding-this-blog-part-i-going-hugo%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fbuilding-this-blog-part-i-going-hugo%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fwelcome-and-relax%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzw10.github.io%2F2018%2F05%2Fbuilding-this-blog-part-i-going-hugo%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -617,9 +801,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/zw10.github.io\/2018\/05\/welcome-and-relax\/';
+          this.page.url = 'https:\/\/zw10.github.io\/2018\/05\/building-this-blog-part-i-going-hugo\/';
           
-            this.page.identifier = '\/2018\/05\/welcome-and-relax\/'
+            this.page.identifier = '\/2018\/05\/building-this-blog-part-i-going-hugo\/'
           
         };
         (function() {

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Coffee for the Mind</title>
+    <link>https://zw10.github.io/categories/web/</link>
+    <description>Recent content in Web on Coffee for the Mind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://zw10.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building this blog part I: Going Hugo</title>
+      <link>https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/</link>
+      <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/</guid>
+      <description>&lt;p&gt;If you want to make a blog like this one, here&amp;rsquo;s how to do it. I&amp;rsquo;m also noting it down for my own use, in case I need to replicate my setup again. Hugo&amp;rsquo;s straightforward enough that anyone new to it (like me) can quickly be effective with it.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

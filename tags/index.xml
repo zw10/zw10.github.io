@@ -6,17 +6,53 @@
     <description>Recent content in Tags on Coffee for the Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://zw10.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Blogging</title>
+      <link>https://zw10.github.io/tags/blogging/</link>
+      <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://zw10.github.io/tags/blogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hello World</title>
       <link>https://zw10.github.io/tags/hello-world/</link>
-      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://zw10.github.io/tags/hello-world/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Static</title>
+      <link>https://zw10.github.io/tags/static/</link>
+      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://zw10.github.io/tags/static/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theoretical Finance</title>
+      <link>https://zw10.github.io/tags/theoretical-finance/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://zw10.github.io/tags/theoretical-finance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theoretical Machine Learning</title>
+      <link>https://zw10.github.io/tags/theoretical-machine-learning/</link>
+      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://zw10.github.io/tags/theoretical-machine-learning/</guid>
       <description></description>
     </item>
     
