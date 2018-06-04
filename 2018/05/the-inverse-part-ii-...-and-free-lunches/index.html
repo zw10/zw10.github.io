@@ -245,17 +245,17 @@
 
 <p>Again, a closer examination of the underlying assumptions used in the actual proof is rather more insightful. Taking a modified example from <a href="https://en.wikipedia.org/wiki/No_free_lunch_theorem">Wikipedia</a>, there are two friends Amy and Bob who compete to see who can find the highest point (global maximum) of a mountain range first. A third friend Chloe acts as the judge and informs them once they&rsquo;ve found the highest point.</p>
 
-<p><img src="https://zw10.github.io/images/20180528_climb_cropped.jpg" alt="Amy and Bob" title="Amy and Bob, on the starting line" /><em>Up they go</em></p>
-
 <p>Amy&rsquo;s strategy is quite sensible: she heads in the direction where the slope rises up the steepest (gradient ascent) and once she reaches a local peak (local maximum), she restarts from a random location in the mountain range. The maverick Bob devises the opposite strategy of heading direction where the slope goes <em>down</em> the steepest. Each time he reaches a local trough (local minimum) he also restarts from a random location.</p>
 
-<p>We expect that for different mountain ranges, Amy will generally find the highest point faster than Bob. However, aliens have come to join in the fun, planting a 60,000-foot pole in the deepest trough, which then becomes the highest point in the mountain range. This means that Bob now has the advantage against Amy.</p>
+<p><img src="https://zw10.github.io/images/20180528_climb_cropped.jpg" alt="Amy and Bob" title="Amy and Bob, on the starting line" /><em>Up they go</em></p>
 
-<p><img src="https://zw10.github.io/images/20180528_pole_cropped.jpg" alt="Alien pole" title="In case you were wondering how Bob'll go up" /><em>The alien pole</em></p>
+<p>We expect that for different mountain ranges, Amy will generally find the highest point faster than Bob. However, aliens have come to join in the fun, planting a 60,000-foot pole in the deepest trough, which then becomes the highest point in the mountain range. This means that Bob now has the advantage against Amy.</p>
 
 <p>Furthermore, the aliens can potentially assist Bob in each and every mountain range - for every situation where aliens don&rsquo;t come, there&rsquo;s a scenario where aliens do come and Bob holds the advantage. So assuming that there&rsquo;s a 50-50 chance of aliens coming (i.e. averaged over all possible scenarios and mountain ranges), Amy and Bob are evenly matched, and neither strategy has an advantage against the other.</p>
 
 <p>More broadly, aliens can plant the pole at any location (uniform randomness) to nullify the advantage of any strategy involving some form of trial-and-improvement, making it no better than random search. In other words, exhaustively enumerating all possible solutions to examine which one produces the best answer is the optimal strategy.</p>
+
+<p><img src="https://zw10.github.io/images/20180528_pole_cropped.jpg" alt="Alien pole" title="In case you were wondering how Bob'll go up" /><em>The alien pole</em></p>
 
 <p>Fortunately, uniform randomness doesn&rsquo;t usually hold in the real-world. All algorithms, heuristics and optimisation techniques from data science, machine learning, statistics, etc. implicitly depend on this, only differing by the further assumptions taken.</p>
 
@@ -527,6 +527,24 @@
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://zw10.github.io/2018/05/laying-down-the-bets/">
+                <h3 class="media-heading">Laying down the bets</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/">
                 <h3 class="media-heading">Building this blog part I: Going Hugo</h3>
               </a>
@@ -604,7 +622,7 @@
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         4 posts found
+         5 posts found
       </p>
     </div>
   </div>

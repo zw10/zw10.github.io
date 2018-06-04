@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zw10.github.io/2018/05/laying-down-the-bets/</loc>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/</loc>
     <lastmod>2018-05-27T00:00:00+00:00</lastmod>
   </url>
@@ -23,6 +28,12 @@
   </url>
   
   <url>
+    <loc>https://zw10.github.io/tags/applied-data-science/</loc>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zw10.github.io/archives/</loc>
     <priority>0</priority>
   </url>
@@ -40,13 +51,19 @@
   
   <url>
     <loc>https://zw10.github.io/</loc>
-    <lastmod>2018-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zw10.github.io/categories/data-science/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zw10.github.io/tags/end-to-end-application/</loc>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -57,20 +74,20 @@
   </url>
   
   <url>
-    <loc>https://zw10.github.io/categories/hello-world/</loc>
-    <lastmod>2018-05-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zw10.github.io/tags/hello-world/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://zw10.github.io/categories/hello-world/</loc>
+    <lastmod>2018-05-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zw10.github.io/post/</loc>
-    <lastmod>2018-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -82,7 +99,13 @@
   
   <url>
     <loc>https://zw10.github.io/tags/</loc>
-    <lastmod>2018-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zw10.github.io/tags/theoretical-economics/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
