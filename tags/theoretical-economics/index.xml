@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theoretical Economics on Coffee for the Mind</title>
-    <link>https://zw10.github.io/tags/theoretical-economics/</link>
+    <link>/tags/theoretical-economics/</link>
     <description>Recent content in Theoretical Economics on Coffee for the Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://zw10.github.io/tags/theoretical-economics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/theoretical-economics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The inverse part I: Why there&#39;s always arbitrage ...</title>
-      <link>https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../</link>
+      <link>/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../</link>
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../</guid>
+      <guid>/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../</guid>
       <description>&lt;p&gt;In my university days, we had a course named &amp;lsquo;Finance and Financial Management&amp;rsquo;, delivered by a former investment banker. Unsurprisingly, it was heavily oversubscribed (I studied maths in London), and any students landing a seat can count themselves very fortunate indeed. Rather less fortunately, half way through the first lecture, I wanted nothing better than to walk out the door.
 &lt;/p&gt;</description>
     </item>
