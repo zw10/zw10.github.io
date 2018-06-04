@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Coffee for the Mind</title>
-    <link>zaowudata.science/categories/</link>
+    <link>https://zw10.github.io/categories/</link>
     <description>Recent content in Categories on Coffee for the Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="zaowudata.science/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zw10.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Science</title>
-      <link>zaowudata.science/categories/data-science/</link>
+      <link>https://zw10.github.io/categories/data-science/</link>
       <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>zaowudata.science/categories/data-science/</guid>
+      <guid>https://zw10.github.io/categories/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Finance</title>
-      <link>zaowudata.science/categories/finance/</link>
+      <link>https://zw10.github.io/categories/finance/</link>
       <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>zaowudata.science/categories/finance/</guid>
+      <guid>https://zw10.github.io/categories/finance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>zaowudata.science/categories/hello-world/</link>
+      <link>https://zw10.github.io/categories/hello-world/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>zaowudata.science/categories/hello-world/</guid>
+      <guid>https://zw10.github.io/categories/hello-world/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>zaowudata.science/categories/web/</link>
+      <link>https://zw10.github.io/categories/web/</link>
       <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>zaowudata.science/categories/web/</guid>
+      <guid>https://zw10.github.io/categories/web/</guid>
       <description></description>
     </item>
     

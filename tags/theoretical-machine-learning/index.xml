@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theoretical Machine Learning on Coffee for the Mind</title>
-    <link>zaowudata.science/tags/theoretical-machine-learning/</link>
+    <link>https://zw10.github.io/tags/theoretical-machine-learning/</link>
     <description>Recent content in Theoretical Machine Learning on Coffee for the Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="zaowudata.science/tags/theoretical-machine-learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zw10.github.io/tags/theoretical-machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The inverse part II: ... and free lunches </title>
-      <link>zaowudata.science/2018/05/the-inverse-part-ii-...-and-free-lunches/</link>
+      <link>https://zw10.github.io/2018/05/the-inverse-part-ii-...-and-free-lunches/</link>
       <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>zaowudata.science/2018/05/the-inverse-part-ii-...-and-free-lunches/</guid>
-      <description>&lt;p&gt;The &amp;lsquo;no free lunch&amp;rsquo; (NFL) theorem resembles the Efficient Market Hypothesis (EMH) from &lt;a href=&#34;zaowudata.science/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../&#34;&gt;part I&lt;/a&gt; in that their true values lies in exactly the opposite of what they say at face value. The folk version of the NFL says that that no algorithm or optimisation technique will perform any better for all cases. Effectively, that there is no silver bullet or &amp;lsquo;algorithmic arbitrage&amp;rsquo; that will magically solve all your needs. This theorem is frequently used to justify further fine-tuning on models.
+      <guid>https://zw10.github.io/2018/05/the-inverse-part-ii-...-and-free-lunches/</guid>
+      <description>&lt;p&gt;The &amp;lsquo;no free lunch&amp;rsquo; (NFL) theorem resembles the Efficient Market Hypothesis (EMH) from &lt;a href=&#34;https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../&#34;&gt;part I&lt;/a&gt; in that their true values lies in exactly the opposite of what they say at face value. The folk version of the NFL says that that no algorithm or optimisation technique will perform any better for all cases. Effectively, that there is no silver bullet or &amp;lsquo;algorithmic arbitrage&amp;rsquo; that will magically solve all your needs. This theorem is frequently used to justify further fine-tuning on models.
 &lt;/p&gt;</description>
     </item>
     
