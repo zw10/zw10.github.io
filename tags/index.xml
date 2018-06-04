@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Coffee for the Mind</title>
-    <link>/tags/</link>
+    <link>zaowudata.science/tags/</link>
     <description>Recent content in Tags on Coffee for the Mind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="zaowudata.science/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blogging</title>
-      <link>/tags/blogging/</link>
+      <link>zaowudata.science/tags/blogging/</link>
       <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blogging/</guid>
+      <guid>zaowudata.science/tags/blogging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>/tags/hello-world/</link>
+      <link>zaowudata.science/tags/hello-world/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hello-world/</guid>
+      <guid>zaowudata.science/tags/hello-world/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Static</title>
-      <link>/tags/static/</link>
+      <link>zaowudata.science/tags/static/</link>
       <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/static/</guid>
+      <guid>zaowudata.science/tags/static/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Theoretical Economics</title>
-      <link>/tags/theoretical-economics/</link>
+      <link>zaowudata.science/tags/theoretical-economics/</link>
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/theoretical-economics/</guid>
+      <guid>zaowudata.science/tags/theoretical-economics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Theoretical Finance</title>
-      <link>/tags/theoretical-finance/</link>
+      <link>zaowudata.science/tags/theoretical-finance/</link>
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/theoretical-finance/</guid>
+      <guid>zaowudata.science/tags/theoretical-finance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Theoretical Machine Learning</title>
-      <link>/tags/theoretical-machine-learning/</link>
+      <link>zaowudata.science/tags/theoretical-machine-learning/</link>
       <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/theoretical-machine-learning/</guid>
+      <guid>zaowudata.science/tags/theoretical-machine-learning/</guid>
       <description></description>
     </item>
     
