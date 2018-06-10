@@ -1,0 +1,923 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.40.3 with theme Tranquilpeak 0.4.3-BETA">
+    <title>Betting on ball part I: Getting some data</title>
+    <meta name="author" content="Zao Wu">
+    <meta name="keywords" content="betting, soccer, football, data science, SQL, data source, analytics, data science, artificial intelligence, machine learning, finance, economics, zao, wu">
+
+    <link rel="icon" href="/images/zw_logo.png">
+    
+
+    
+    <meta name="description" content="Right, so the world cup is around the corner - what better way to celebrate than to see if we can make some money from gambling? Before anything else, I&rsquo;ll need to go hunting for some data.
+
+">
+    <meta property="og:description" content="Right, so the world cup is around the corner - what better way to celebrate than to see if we can make some money from gambling? Before anything else, I&rsquo;ll need to go hunting for some data.
+
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Betting on ball part I: Getting some data">
+    <meta property="og:url" content="/2018/06/betting-on-ball-part-i-getting-some-data/">
+    <meta property="og:site_name" content="Coffee for the Mind">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Coffee for the Mind">
+    <meta name="twitter:description" content="Right, so the world cup is around the corner - what better way to celebrate than to see if we can make some money from gambling? Before anything else, I&rsquo;ll need to go hunting for some data.
+
+">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="/images/zw_logo.png">
+    
+
+    
+      <meta property="og:image" content="/images/20180609_football_cropped.jpg">
+    
+    
+      <meta property="og:image" content="/images/20180522_covering_centred_2.jpg">
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/">Coffee for the Mind</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="/images/zw_logo.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about">
+          <img class="sidebar-profile-picture" src="/images/zw_logo.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Zao Wu</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong>Actionable</strong> insight from data. Got an interesting problem? Let&rsquo;s <a href="https://www.linkedin.com/in/zao-wu-57304a118">collaborate</a>.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/https://www.linkedin.com/in/zao-wu-57304a118">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/https://github.com/zw10">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('/images/20180522_covering_centred_2.jpg')"
+       data-behavior="5">
+    
+      <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Betting on ball part I: Getting some data
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-06-07T00:00:00Z">
+        
+  
+  
+  
+  
+    7 June 2018
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="/categories/data-science">data science</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="5"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>Right, so the world cup is around the corner - what better way to celebrate than to see if we can make some money from gambling? Before anything else, I&rsquo;ll need to go hunting for some data.</p>
+
+<p></p>
+
+<h2 id="where-to-get-the-data">Where to get the data?</h2>
+
+<p>First of all, if you just want the historical world cup match scores you can find them <a href="https://github.com/jokecamp/FootballData/tree/master/World%20Cups">here</a>. But if you want to build your own relational database of football data so that you can build a better predictive model, then read on.</p>
+
+<p>So thanks to Gerald Bauer for the <a href="https://openfootball.github.io/">data</a> - please do reach out to him if you want to contribute - I&rsquo;m also trying to do my part with this post, which should hopefully make it easier to get started with sportdb.</p>
+
+<p>Because the data was in the <a href="https://openfootball.github.io/docs/intro.html">mini football data language</a>, I debated for a while whether to use sportdb, the command-line utility provided or just write my own parser to access the flat files directly - which would also avoid having to navigate any database connections.</p>
+
+<p>Not wanting to reinvent the wheel, I opted to use sportdb. Note that there is an easier way to access the data using <a href="https://github.com/openfootball/world-cup.json">JSON</a> (which was created almost at exactly the same time as this post), but there&rsquo;s much less data available.</p>
+
+<p>The installation process for the sportdb was considerably more involved than I had bargained for, because I was lacking a bunch of prerequisites, so maybe I should have just written that parser instead. Oh well.</p>
+
+<p>The documentation was fragmented across different repositories, so it actually took two afternoons to figure out how to get at the data. Again assuming that you&rsquo;re running Ubuntu, just paste the commands below in your terminal to get at the data - it might take a while to finish running.</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash">sudo apt-get install git-core curl zlib1g-dev ruby-dev build-essential libssl-dev libreadline-dev libyaml-dev sqlite3-dev  libsqlite3-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev;\
+gem install sportdb;\
+sportdb new worldcup;\</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>The above commands installed the <code>sportdb</code> gem, and then used it to create a starter template. I&rsquo;m interested primarily in world cup data, but you can change the worldcup option to option from <a href="https://github.com/openfootball/datafile">this list</a>, just remember to chop &lsquo;.rb&rsquo; from the end.</p>
+
+<p>Right now this will only contain the most recent world cup data from 2014, which isn&rsquo;t going to be enough. To include historical data, we&rsquo;ll need to change the configurations, found in the somewhat quirkily-named <code>Datafile</code>. Just replace the contents of the data file with the below to get historical world cup data as well - this is from the <a href="http://groups.google.com/group/opensport">forum</a>.</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash">world  &#39;world.db&#39;, setup: &#39;countries&#39;
+football &#39;national-teams&#39;
+football &#39;national-teams&#39;, setup: &#39;history&#39;
+football &#39;world-cup&#39;
+football &#39;world-cup&#39;, setup: &#39;history&#39;</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>The <code>setup: 'history'</code> is just to tell sportdb what data sets to include in the database - you can find the pre-configured setups <a href="https://github.com/openfootball/world-cup/tree/master/setups">here</a>. Now just run build on the database to get the data. Beautiful.
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash">sportdb build</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure></p>
+
+<p><img src="/images/20180609_sportweb_cropped.png" alt="cli-sql" title="Poke around some more!" /><em>Poking around</em></p>
+
+<p>In above screenshot I&rsquo;m exploring the database through a browser with sportweb. If you want to do likewise, just input the following into your terminal.</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight bash language-bash">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-bash"><code class="bash">gem install sportweb;\
+sportweb sport.db;\</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>Navigate to <code>localhost:3000</code> to check out what&rsquo;s actually in the database. There is a <a href="http://openfootball.github.io/schema/">guide</a> to the schema that the database follows, and a nice <a href="http://openfootball.github.io/">diagram</a> that illustrates it.</p>
+
+<p>Once you&rsquo;ve poked around to your heart&rsquo;s content, to continue working with the data, you&rsquo;ve two options:</p>
+
+<ol>
+<li>Use the sqlite3 command-line interface (CLI) to query the table directly - I didn&rsquo;t realise that running SQL queries directly from the terminal was a &lsquo;thing&rsquo; before attempting this project either, but it actually feels natural enough.
+<img src="/images/20180609_cli_sql_cropped.png" alt="cli-sql" title="In case you were wondering" /><em>Too pro by half?</em></li>
+<li>Use a tool like <a href="https://sqlitestudio.pl/index.rvt?act=download">SQLiteStudio</a>, which is more graphical and recommended if you&rsquo;re working with more complex schema (as is the case here).
+<img src="/images/20180609_sqlitestudio_cropped.png" alt="cli-sql" title="Nice and easy" /><em>More my style</em></li>
+</ol>
+
+<p>Scroll down and and go through whichever section is relevant to you.</p>
+
+<h2 id="sqlite3-cli">Sqlite3 CLI</h2>
+
+<p>Navigate to the folder with the database file, and type sqlite3. You should see something like the below. Type in <code>.open sport.db</code>, and <code>.tables</code> to see the list of available tables. Try running some queries to get used to the interface, and don&rsquo;t forget the semi-colons at the end of each line! When you&rsquo;re done, type <code>.quit</code> to terminate.</p>
+
+<h2 id="sqlitestudio">SQLiteStudio</h2>
+
+<p>Go to Database -&gt; Add a database. Find your database folder, and the database file itself, named <code>sport.db</code> by default. In &lsquo;Name (on the list)&rsquo;, type in the name you&rsquo;d like the database to show up as in SQLiteStudio - don&rsquo;t worry, you can change this later by right-clicking on the name and clicking &lsquo;Edit the database&rsquo;.</p>
+
+<h2 id="exporting-the-data-to-csv">Exporting the data to csv</h2>
+
+<p>Try running the code below to produce a table of match scores from the 1930 world cup to the present.</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight sql language-sql">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-sql"><code class="sql">SELECT all_gms.*
+, events.&#34;key&#34; --key is usually a reserved keyword, hence the &#34;&#34;
+FROM rounds AS rds
+INNER JOIN( --the subquery produces a table of all games
+    SELECT gms.id
+    ,gms.round_id
+    ,gms.score1
+    ,gms.score2
+    ,t1.title AS team1
+    ,t2.title AS team2
+    FROM games AS gms
+    INNER JOIN teams t1 ON gms.team1_id = t1.id
+    INNER JOIN teams t2 ON gms.team2_id = t2.id
+) AS all_gms
+ON rds.id = all_gms.round_id
+INNER JOIN events
+ON rds.event_id = events.id
+WHERE events.league_id = 1;
+--the world cup proper has &#39;league_id&#39; 1</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>If you are going with the sqlite3 CLI, then use:</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight sql language-sql">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="code-highlight language-sql"><code class="sql">.headers on
+.mode csv
+.output output.csv</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>Before running the previous query (may I suggest just copying and pasting it in). Afterwards you can use <code>.quit</code> as usual, and you&rsquo;ll find the csv file stored in the same directory as your database file.</p>
+
+<p>If you are running SQLiteStudio, then you can press F9 or click the play button to run. Next, go to  Tools -&gt; export, select Query results, click Next, paste in the query you want to run and choose where you want to save the csv file using Exported file path.</p>
+
+<h2 id="bonus-section">Bonus section</h2>
+
+<p>Extra goodies if you&rsquo;ve made it this far - some more links to football data can be found <a href="https://www.jokecamp.com/blog/guide-to-football-and-soccer-data-and-apis/">here</a> and <a href="https://github.com/planetopendata/awesome-football">here</a>.</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/applied-data-science/">applied data science</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/end-to-end-application/">end to end application</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/building-this-blog-part-i-going-hugo/" data-tooltip="Building this blog part I: Going Hugo">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/06/betting-on-ball-part-i-getting-some-data/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/06/betting-on-ball-part-i-getting-some-data/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/06/betting-on-ball-part-i-getting-some-data/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Zao Wu. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/05/building-this-blog-part-i-going-hugo/" data-tooltip="Building this blog part I: Going Hugo">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/06/betting-on-ball-part-i-getting-some-data/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/06/betting-on-ball-part-i-getting-some-data/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/06/betting-on-ball-part-i-getting-some-data/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2018%2F06%2Fbetting-on-ball-part-i-getting-some-data%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2018%2F06%2Fbetting-on-ball-part-i-getting-some-data%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2018%2F06%2Fbetting-on-ball-part-i-getting-some-data%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="/images/zw_logo.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Zao Wu</h4>
+    
+      <div id="about-card-bio"><strong>Actionable</strong> insight from data. Got an interesting problem? Let&rsquo;s <a href="https://www.linkedin.com/in/zao-wu-57304a118">collaborate</a>.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Analytics and advisory
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/06/betting-on-ball-part-i-getting-some-data/">
+                <h3 class="media-heading">Betting on ball part I: Getting some data</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Right, so the world cup is around the corner - what better way to celebrate than to see if we can make some money from gambling? Before anything else, I&rsquo;ll need to go hunting for some data.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/05/building-this-blog-part-i-going-hugo/">
+                <h3 class="media-heading">Building this blog part I: Going Hugo</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>If you want to make a blog like this one, here&rsquo;s how to do it. I&rsquo;m also noting it down for my own use, in case I need to replicate my setup again. Hugo&rsquo;s straightforward enough that anyone new to it (like me) can quickly be effective with it.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/05/the-inverse-part-ii-...-and-free-lunches/">
+                <h3 class="media-heading">The inverse part II: ... and free lunches </h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>The &lsquo;no free lunch&rsquo; (NFL) theorem resembles the Efficient Market Hypothesis (EMH) from <a href="/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">part I</a> in that their true values lies in exactly the opposite of what they say at face value. The folk version of the NFL says that that no algorithm or optimisation technique will perform any better for all cases. Effectively, that there is no silver bullet or &lsquo;algorithmic arbitrage&rsquo; that will magically solve all your needs. This theorem is frequently used to justify further fine-tuning on models.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../">
+                <h3 class="media-heading">The inverse part I: Why there&#39;s always arbitrage ...</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>In my university days, we had a course named &lsquo;Finance and Financial Management&rsquo;, delivered by a former investment banker. Unsurprisingly, it was heavily oversubscribed (I studied maths in London), and any students landing a seat can count themselves very fortunate indeed. Rather less fortunately, half way through the first lecture, I wanted nothing better than to walk out the door.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/05/welcome-and-relax/">
+                <h3 class="media-heading">Welcome and relax</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Glad to see you here. You&rsquo;re in the right spot if you&rsquo;ve come to look for a spot of mental stimulus.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         5 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('/images/abstract_2.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/2018\/06\/betting-on-ball-part-i-getting-some-data\/';
+          
+            this.page.identifier = '\/2018\/06\/betting-on-ball-part-i-getting-some-data\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ZW';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

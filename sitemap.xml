@@ -3,109 +3,126 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zw10.github.io/2018/05/building-this-blog-part-i-going-hugo/</loc>
+    <loc>/2018/06/betting-on-ball-part-i-getting-some-data/</loc>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2018/05/building-this-blog-part-i-going-hugo/</loc>
     <lastmod>2018-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/2018/05/the-inverse-part-ii-...-and-free-lunches/</loc>
+    <loc>/2018/05/the-inverse-part-ii-...-and-free-lunches/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../</loc>
+    <loc>/2018/05/the-inverse-part-i-why-theres-always-arbitrage-.../</loc>
     <lastmod>2018-05-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/2018/05/welcome-and-relax/</loc>
+    <loc>/2018/05/welcome-and-relax/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/archives/</loc>
+    <loc>/tags/applied-data-science/</loc>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/tags/blogging/</loc>
+    <loc>/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/blogging/</loc>
     <lastmod>2018-05-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/</loc>
-    <lastmod>2018-05-27T00:00:00+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/categories/data-science/</loc>
+    <loc>/categories/data-science/</loc>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/end-to-end-application/</loc>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/finance/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/categories/finance/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zw10.github.io/tags/hello-world/</loc>
+    <loc>/tags/hello-world/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/categories/hello-world/</loc>
+    <loc>/categories/hello-world/</loc>
     <lastmod>2018-05-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/post/</loc>
-    <lastmod>2018-05-27T00:00:00+00:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/tags/static/</loc>
+    <loc>/tags/static/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/tags/</loc>
-    <lastmod>2018-05-27T00:00:00+00:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/tags/theoretical-economics/</loc>
+    <loc>/tags/theoretical-economics/</loc>
     <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/tags/theoretical-finance/</loc>
+    <loc>/tags/theoretical-finance/</loc>
     <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/tags/theoretical-machine-learning/</loc>
+    <loc>/tags/theoretical-machine-learning/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zw10.github.io/categories/web/</loc>
+    <loc>/categories/web/</loc>
     <lastmod>2018-05-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
